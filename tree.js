@@ -1,31 +1,27 @@
 ;(function (){
 
-  function Tree (tree) {
-    // var
-    //     element = document.querySelector(element);
-    // ;
+  function Tree (tree, callback) {
 
-    buildTree(tree);
+    for (var key in tree) {
+      var obj = tree[key];
+
+      checkSons(obj);
+    }
 
 
-    function buildTree(tree){
-      for (var key in tree) {
-        var obj = tree[key];
-        console.log("=> ", obj.value);
+    function checkSons(obj) {
+      if (obj.hasOwnProperty("sons")) {
+        for (var key in obj.sons) {
+          var son = obj.sons[key];
 
-        checkSons(obj);
-      }
-    };
-  }
+          if (callback) {
+            callback(obj, son);
+          };
 
-  function checkSons(obj) {
-    if (obj.hasOwnProperty("sons")) {
-      for (var key in obj.sons) {
-        var son = obj.sons[key]
-
-        console.log("\t\t => ", son.value);
-      }
-    };
+          checkSons(son);
+        }
+      };
+    }
   }
 
   this.Tree = Tree;
