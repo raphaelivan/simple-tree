@@ -1,3 +1,10 @@
+/*
+  name    : "tree.js",
+  author  : "Raphael Ivan",
+  email   : "contato@raphaelivan.com.br",
+  github  : "https://github.com/raphaelivan/tree.js"
+*/
+
 ;(function (){
 
   function Tree (tree, callback) {
