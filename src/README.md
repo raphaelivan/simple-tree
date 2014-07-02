@@ -4,11 +4,6 @@ An easy way to create a tree structure in JavaScript
 
 ![structure](http://oi58.tinypic.com/zvfh1.jpg)
 
-## Install
-```js
-    npm install simple-tree
-```
-
 ## Usage
 First, you need to create the tree structure.
 

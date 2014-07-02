@@ -1,13 +1,5 @@
-/*
-  name    : "tree.js",
-  author  : "Raphael Ivan",
-  email   : "contato@raphaelivan.com.br",
-  github  : "https://github.com/raphaelivan/tree.js"
-*/
-
 ;(function (){
-
-  function Tree (tree, callback) {
+  var create = function(tree, callback) {
 
     for (var key in tree) {
       var obj = tree[key];
@@ -23,14 +15,13 @@
 
           if (callback) {
             callback(obj, son);
-          };
+          }
 
           checkSons(son);
         }
-      };
+      }
     }
-  }
+  };
 
-  this.Tree = Tree;
-})(this);
-
+  exports.create = create;
+})();
