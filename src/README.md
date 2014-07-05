@@ -35,6 +35,8 @@ var tree = {
 Then just create your tree.
 
 ```js
+  var Tree = require('simple-tree');
+
   Tree.create(tree, function(branch, sons){
     //manipule branch and sons
   });
@@ -48,6 +50,8 @@ The function passed as the callback takes two parameters: the parent and son. It
 
 
 ```js
+  var Tree = require('simple-tree');
+
   Tree.create(tree, function(obj, son){
     console.log(obj.value);
     console.log("\t => ", son.value);
